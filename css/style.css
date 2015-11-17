@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.view {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #000;
+}
+
+#canvas{
+    background-color: #000;
+}
+#coins {
+    width: 90px;
+    height: 70px;
+    line-height: 70px;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    padding-left: 60px;
+    background: url(../images/coins.png) no-repeat;
+    background-size: 30px 30px;
+    background-position: 20px 20px;
+    font-size: 34px;
+    color: #FFF;
+}
