@@ -10,7 +10,7 @@
         PICHEIGHT = 64,
         PROPORTION = 150/1;  // 游戏与实际的距离比例
 
-    function Man(){
+    function Man(x,y,img){
         this.x = x;
         this.y = y;
         this.endy = y;
@@ -23,7 +23,7 @@
     }
 
     Man.prototype = {
-        init:function(img,stage){
+        init:function(img){
             var manSpriteSheet = new createjs.SpriteSheet({
                 'images': [img],
                 'frames': {'regX':0,'height':PICHEIGHT,'count':45,'regY':1,'width':PICWIDTH},
@@ -49,7 +49,6 @@
             this.sprite = new createjs.Sprite(manSpriteSheet,this.state);
             this.sprite.framerate = FRAME_RATE;
             this.sprite.setTransform(this.x,this.y,SCALE_X,SCALE_Y);
-            // stage.addChild(this.sprite);
         },
         update: function(){
             var sprite = this.sprite;
@@ -103,7 +102,7 @@
                 w: WIDTH,
                 h: HEIGHT
             }
-        }
+        },
         picsize: function(){
             return{
                 w: PICWIDTH,
